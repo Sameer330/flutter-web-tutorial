@@ -21,52 +21,45 @@ class _Container2State extends State<Container2> {
 
   Widget MobileContainer2() {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: w! / 10, vertical: 20),
+      width: double.infinity,
+      decoration: BoxDecoration(color: AppColor.primary),
       child: Column(
         children: [
           Container(
-            height: w! / 1.2,
-            width: w! / 1.2,
-            decoration: const BoxDecoration(
+            padding: const EdgeInsets.only(
+              left: 20,
+              right: 20,
+              bottom: 0,
+              top: 20,
+            ),
+            child: Container(
+              width: double.infinity,
+              height: 195,
+              decoration: const BoxDecoration(
                 image: DecorationImage(
-                    image: AssetImage(illustration1), fit: BoxFit.contain)),
-          ),
-          const SizedBox(
-            height: 20,
-          ),
-          Text(
-            'Track your \nExpenses to \nSave Money',
-            textAlign: TextAlign.center,
-            style: TextStyle(
-                fontSize: w! / 10, fontWeight: FontWeight.bold, height: 1),
-          ),
-          const SizedBox(
-            height: 5,
-          ),
-          Text(
-            'Helps you to organize your income and expenses',
-            textAlign: TextAlign.center,
-            style: TextStyle(color: Colors.grey.shade600, fontSize: 16),
-          ),
-          const SizedBox(
-            height: 30,
+                  image: AssetImage(dashboard),
+                  fit: BoxFit.contain,
+                ),
+              ),
+            ),
           ),
           Container(
-            height: 45,
-            child: ElevatedButton.icon(
-                style: ButtonStyle(
-                    backgroundColor:
-                        MaterialStateProperty.all(AppColor.primary)),
-                onPressed: () {},
-                icon: const Icon(Icons.arrow_drop_down),
-                label: const Text('Try a Demo')),
-          ),
-          const SizedBox(
-            height: 10,
-          ),
-          Text(
-            '— Web, iOs and Android',
-            style: TextStyle(color: Colors.grey.shade600, fontSize: 16),
+            color: Colors.white,
+            width: double.infinity,
+            padding: const EdgeInsets.symmetric(
+              vertical: 40,
+            ),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                companyLogo(fb),
+                companyLogo(google),
+                companyLogo(cocacola),
+                companyLogo(linkedin),
+                companyLogo(samsung),
+              ],
+            ),
           )
         ],
       ),

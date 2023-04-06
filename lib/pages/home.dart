@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:wflutter_1/pages/containers/container1.dart';
 import 'package:wflutter_1/pages/containers/container2.dart';
+import 'package:wflutter_1/pages/containers/container3.dart';
+import 'package:wflutter_1/pages/containers/container4.dart';
+import 'package:wflutter_1/pages/containers/container5.dart';
 import 'package:wflutter_1/utils/constants.dart';
 import 'package:wflutter_1/widgets/navbar.dart';
 
@@ -24,6 +27,9 @@ class _HomeState extends State<Home> {
               NavBar(),
               Container1(),
               Container2(),
+              Container3(),
+              Container4(),
+              Container5(),
             ],
           ),
         ),
